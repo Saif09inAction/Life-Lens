@@ -1,36 +1,108 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# LifeLens – AI Smart Assistive Goggles
+
+A modern startup-style website for **LifeLens**, AI-powered smart goggles that help blind users navigate safely and deaf users understand conversations in real time.
+
+**Team: Code Paglu's** — Sufyan Khan, Arsheel Patel, Saif Salmani
+
+## Tech Stack
+
+- **Next.js 16** – React framework
+- **Tailwind CSS 4** – Styling
+- **Framer Motion** – Animations
+- **React Three Fiber** – 3D (ready for product mockup)
+- **TypeScript** – Type safety
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+# Install dependencies
+npm install
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Adding Your Prototype Images
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+To display your prototype diagrams and workflow images:
 
-## Learn More
+1. Add images to `/public/images/`
+2. Recommended filenames:
+   - `goggles-mockup.png` or `goggles-mockup.svg` – Hero product mockup
+   - `prototype-blind.png` – Blind navigation prototype
+   - `prototype-deaf.png` – Deaf communication prototype
+   - `architecture.png` or `architecture.svg` – System architecture diagram
+   - `workflow.png` – Workflow diagram
 
-To learn more about Next.js, take a look at the following resources:
+3. Update the components to use your images:
+   - `HeroSection.tsx` – Product mockup
+   - `PrototypeSection.tsx` – Blind & deaf prototypes
+   - `ArchitectureSection.tsx` – Architecture/workflow diagram
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Example:
+```tsx
+<Image
+  src="/images/your-prototype.png"
+  alt="Your prototype"
+  width={600}
+  height={400}
+  className="..."
+/>
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Project Structure
 
-## Deploy on Vercel
+```
+src/
+├── app/
+│   ├── layout.tsx      # Root layout, fonts, metadata
+│   ├── page.tsx        # Home page
+│   └── globals.css     # Global styles, dark mode
+├── components/
+│   ├── ThemeProvider.tsx   # Dark/light mode
+│   ├── Header.tsx          # Navigation
+│   ├── Footer.tsx          # Footer
+│   ├── AnimatedCounter.tsx # Stats counters
+│   ├── GlassCard.tsx       # Glassmorphism cards
+│   └── sections/
+│       ├── HeroSection.tsx
+│       ├── ProblemSection.tsx
+│       ├── ResearchSection.tsx
+│       ├── SolutionSection.tsx
+│       ├── HowItWorksSection.tsx
+│       ├── PrototypeSection.tsx
+│       ├── ArchitectureSection.tsx
+│       ├── TechStackSection.tsx
+│       ├── ImpactSection.tsx
+│       ├── MarketSection.tsx
+│       ├── TeamSection.tsx
+│       └── ContactSection.tsx
+public/
+└── images/             # Add your prototype images here
+    ├── goggles-mockup.svg
+    └── placeholder.svg
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Features
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- ✅ Dark / Light mode toggle
+- ✅ Responsive design (mobile, tablet, desktop)
+- ✅ Smooth scroll animations (Framer Motion)
+- ✅ Glassmorphism cards
+- ✅ Inter & Space Grotesk typography
+- ✅ Animated statistics counters
+- ✅ Contact form for demo requests
+- ✅ SEO-optimized metadata
+
+## Build
+
+```bash
+npm run build
+npm start
+```
+
+## License
+
+Private – Code Paglu's
