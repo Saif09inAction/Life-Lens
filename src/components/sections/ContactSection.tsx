@@ -7,16 +7,20 @@ export default function ContactSection() {
   const [formState, setFormState] = useState({
     name: "",
     email: "",
-    type: "demo",
+    type: "collaboration",
     message: "",
   });
   const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // In production, integrate with your backend/email service
+    const subject = encodeURIComponent(`LifeLens – ${formState.type} from ${formState.name}`);
+    const body = encodeURIComponent(
+      `Name: ${formState.name}\nEmail: ${formState.email}\nType: ${formState.type}\n\nMessage:\n${formState.message}`
+    );
+    window.location.href = `mailto:saifsalmani224@gmail.com?subject=${subject}&body=${body}`;
     setSubmitted(true);
-    setFormState({ name: "", email: "", type: "demo", message: "" });
+    setFormState({ name: "", email: "", type: "collaboration", message: "" });
   };
 
   const handleChange = (
@@ -38,10 +42,10 @@ export default function ContactSection() {
           className="text-center mb-16"
         >
           <h2 className="font-display text-2xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
-            Contact & Demo Request
+            Contact
           </h2>
           <p className="mt-3 sm:mt-4 text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
-            Request a demo, collaborate with us, or share feedback.
+            Collaborate with us or share your feedback.
           </p>
         </motion.div>
 
@@ -110,7 +114,6 @@ export default function ContactSection() {
                   onChange={handleChange}
                   className="w-full rounded-xl border border-zinc-300 dark:border-zinc-600 bg-white dark:bg-zinc-800 px-4 py-3 text-foreground focus:border-accent focus:ring-1 focus:ring-accent focus:outline-none"
                 >
-                  <option value="demo">Demo Request</option>
                   <option value="collaboration">Collaboration</option>
                   <option value="feedback">Feedback</option>
                 </select>
