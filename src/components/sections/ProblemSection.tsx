@@ -22,24 +22,34 @@ const realStruggles = [
 
 const impactImages = [
   {
-    src: "/images/problem-street.png",
-    alt: "Busy street - blind and deaf pedestrians face high risk of accidents",
-    caption: "Street hazards",
+    src: "/images/problem-blind-group-1.png",
+    alt: "Blind men guiding each other across a chaotic city road",
+    caption: "When one person without sight leads another, a single mistake can hurt all of them.",
   },
   {
-    src: "/images/problem-mobility.png",
-    alt: "Blind person with cane - many lack even this basic aid",
-    caption: "Lack of mobility aids",
+    src: "/images/problem-blind-group-2.png",
+    alt: "Group of blind people crossing a busy road with help from others",
+    caption: "Every crossing is a negotiation with traffic, noise, and trust in strangers.",
   },
   {
-    src: "/images/problem-communication.png",
-    alt: "Deaf individuals face communication barriers daily",
-    caption: "Communication isolation",
+    src: "/images/problem-blind-crossing.png",
+    alt: "Blind man with white cane alone at a crossing",
+    caption: "Alone at the curb, waiting for a gap in sound that might not be safe.",
   },
   {
-    src: "/images/problem-urban.png",
-    alt: "Urban hazards - manholes and obstacles endanger blind pedestrians",
-    caption: "Urban danger",
+    src: "/images/problem-deaf-signing.png",
+    alt: "Deaf woman signing intensely during a conversation",
+    caption: "For deaf people, even a simple sentence can become hard work to follow in a noisy world.",
+  },
+  {
+    src: "/images/problem-blind-group-3.png",
+    alt: "Blind men with white canes navigating traffic together",
+    caption: "Side by side with traffic, one missed horn or broken signal can change everything.",
+  },
+  {
+    src: "/images/problem-deaf-school-children.png",
+    alt: "Group of deaf school children signing together",
+    caption: "In deaf schools, entire classrooms speak in their hands—yet the outside world rarely speaks back in the same language.",
   },
 ];
 
@@ -51,13 +61,13 @@ export default function ProblemSection() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16"
         >
           <h2 className="font-display text-2xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
-            Real-Life Struggles
+            What life looks like on the street
           </h2>
-          <p className="mt-3 sm:mt-4 text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto px-1">
-            Blind and deaf people face daily risks: no stick, unemployment, robbery, falling into manholes—and families live in constant worry. We are here to help.
+          <p className="mt-3 sm:mt-4 text-sm sm:text-base text-muted-foreground max-w-xl mx-auto px-1">
+            Instead of long reports, here is the daily news for many blind and deaf people.
           </p>
         </motion.div>
 
@@ -109,26 +119,27 @@ export default function ProblemSection() {
           <h3 className="font-display text-xl font-bold text-foreground mb-6 text-center">
             The reality
           </h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+          <div className="flex sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 overflow-x-auto sm:overflow-visible pb-4 sm:pb-0 snap-x snap-mandatory -mx-4 px-4 sm:mx-0 sm:px-0">
             {impactImages.map((img, i) => (
               <motion.div
                 key={img.caption}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 40, scale: 0.95, rotateX: 8 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1, rotateX: 0 }}
+                whileHover={{ y: -6, scale: 1.02, rotateY: 3 }}
                 viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="rounded-xl overflow-hidden border border-zinc-200 dark:border-zinc-700 shadow-lg"
+                transition={{ delay: i * 0.08, duration: 0.6, type: "spring", stiffness: 120, damping: 18 }}
+                className="rounded-3xl overflow-hidden border border-zinc-200/80 dark:border-zinc-700/80 shadow-[0_26px_80px_rgba(15,23,42,0.65)] bg-zinc-950/90 min-w-[260px] max-w-sm sm:max-w-none snap-center"
               >
                 <div className="relative aspect-[4/3]">
                   <Image
                     src={img.src}
                     alt={img.alt}
                     fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 25vw"
+                    className="object-cover scale-105 hover:scale-110 transition-transform duration-700 ease-out"
+                    sizes="(max-width: 768px) 100vw, 33vw"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
-                  <p className="absolute bottom-3 left-3 right-3 font-semibold text-white text-sm">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent" />
+                  <p className="absolute bottom-3 left-3 right-3 font-medium text-white text-sm leading-snug">
                     {img.caption}
                   </p>
                 </div>

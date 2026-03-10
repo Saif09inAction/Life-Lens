@@ -1,12 +1,12 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import HeroSection from "@/components/sections/HeroSection";
-import JourneySection from "@/components/sections/JourneySection";
-import ProblemSection from "@/components/sections/ProblemSection";
-import ResearchSection from "@/components/sections/ResearchSection";
-import SolutionSection from "@/components/sections/SolutionSection";
-import HowItWorksSection from "@/components/sections/HowItWorksSection";
-import ImpactSection from "@/components/sections/ImpactSection";
+import StoryHero from "@/components/story/StoryHero";
+import StoryRisk from "@/components/story/StoryRisk";
+import StoryRealityStrip from "@/components/story/StoryRealityStrip";
+import StoryJourneys from "@/components/story/StoryJourneys";
+import StoryConcept from "@/components/story/StoryConcept";
+import StoryPrototype from "@/components/story/StoryPrototype";
+import StoryClosing from "@/components/story/StoryClosing";
 import TeamSection from "@/components/sections/TeamSection";
 
 export default function Home() {
@@ -14,13 +14,13 @@ export default function Home() {
     <div className="min-h-screen bg-background text-foreground">
       <Header />
       <main>
-        <HeroSection />
-        <JourneySection />
-        <ProblemSection />
-        <ResearchSection />
-        <SolutionSection />
-        <HowItWorksSection />
-        <ImpactSection />
+        <StoryHero />
+        <StoryRisk />
+        <StoryRealityStrip />
+        <StoryJourneys />
+        <StoryConcept />
+        <StoryPrototype />
+        <StoryClosing />
         <TeamSection />
       </main>
       <Footer />

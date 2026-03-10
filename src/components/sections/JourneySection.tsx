@@ -62,11 +62,10 @@ export default function JourneySection() {
           className="text-center mb-16"
         >
           <h2 className="font-display text-2xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
-            Imagined journeys with LifeLens
+            Two lives, one idea
           </h2>
-          <p className="mt-3 sm:mt-4 text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto">
-            LifeLens is currently in the ideation and concept stage. These stories are imagined day-in-the-life journeys,
-            based on real struggles of blind and deaf people that we studied for this hackathon.
+          <p className="mt-3 sm:mt-4 text-sm sm:text-base text-muted-foreground max-w-3xl mx-auto">
+            Imagined day-in-the-life journeys inspired by real blind and deaf people we studied for this hackathon.
           </p>
         </motion.div>
 

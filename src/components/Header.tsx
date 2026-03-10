@@ -5,14 +5,13 @@ import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 
 const navLinks = [
-  { href: "#problem", label: "Problem" },
-  { href: "#research", label: "Research" },
-  { href: "#solution", label: "Solution" },
-  { href: "#how-it-works", label: "How It Works" },
+  { href: "#hero", label: "Story" },
+  { href: "#risk", label: "Numbers" },
+  { href: "#reality", label: "Reality" },
+  { href: "#journeys", label: "Journeys" },
+  { href: "#concept", label: "Concept" },
   { href: "#prototype", label: "Prototype" },
-  { href: "#architecture", label: "Architecture" },
   { href: "#team", label: "Team" },
-  { href: "#contact", label: "Contact" },
 ];
 
 export default function Header() {
