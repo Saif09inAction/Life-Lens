@@ -4,7 +4,14 @@ import { motion } from "framer-motion";
 import GlassCard from "../GlassCard";
 import AnimatedCounter from "../AnimatedCounter";
 
-const sources = [
+type SourceStat = {
+  title: string;
+  stat: number | string;
+  suffix?: string;
+  description: string;
+};
+
+const sources: SourceStat[] = [
   {
     title: "WHO World Report on Vision",
     stat: 2.2,
@@ -63,12 +70,16 @@ export default function ResearchSection() {
                 </div>
                 <div>
                   <h3 className="font-semibold text-white text-sm">{source.title}</h3>
-                  <AnimatedCounter
-                    value={source.stat}
-                    suffix={source.suffix}
-                    className="mt-1 text-2xl font-display font-bold text-emerald-300"
-                    duration={2.4}
-                  />
+                  {typeof source.stat === "number" ? (
+                    <AnimatedCounter
+                      value={source.stat}
+                      suffix={source.suffix}
+                      className="mt-1 text-2xl font-display font-bold text-emerald-300"
+                      duration={2.4}
+                    />
+                  ) : (
+                    <p className="mt-1 text-lg font-display font-semibold text-emerald-300">{source.stat}</p>
+                  )}
                   <p className="mt-1 text-xs text-zinc-400">{source.description}</p>
                 </div>
               </div>
