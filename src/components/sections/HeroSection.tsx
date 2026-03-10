@@ -6,14 +6,14 @@ import Link from "next/link";
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 sm:pt-24">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 sm:pt-22 lg:pt-24">
       {/* Dark gradient background - Apple/Stripe style */}
       <div className="absolute inset-0 bg-gradient-to-b from-zinc-950 via-zinc-900 to-zinc-950" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(59,130,246,0.15),transparent)]" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_40%_at_80%_50%,rgba(139,92,246,0.08),transparent)]" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_40%_30%_at_20%_80%,rgba(6,182,212,0.06),transparent)]" />
 
-      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 pt-8 sm:pt-24 pb-20 sm:pb-24 lg:py-32">
+      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 pt-8 sm:pt-12 lg:pt-16 pb-20 sm:pb-24 lg:pb-32">
         <div className="grid lg:grid-cols-2 gap-10 sm:gap-16 items-center">
           <div>
             <motion.div
