@@ -62,9 +62,13 @@ export default function ProblemSection() {
         </motion.div>
 
         {/* Struggle stats */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-10 sm:mb-12">
+        <div className="flex sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-10 sm:mb-12 overflow-x-auto sm:overflow-visible pb-2 sm:pb-0 snap-x snap-mandatory -mx-4 px-4 sm:mx-0 sm:px-0">
           {struggleStats.map((stat, i) => (
-            <GlassCard key={stat.label} delay={i * 0.1}>
+            <GlassCard
+              key={stat.label}
+              delay={i * 0.1}
+              className="min-w-[230px] max-w-xs sm:max-w-none snap-center"
+            >
               <div className="text-2xl lg:text-3xl font-display font-bold text-red-500 dark:text-red-400">
                 <AnimatedCounter value={stat.value} suffix={stat.suffix} />
               </div>
@@ -84,7 +88,7 @@ export default function ProblemSection() {
           <h3 className="font-display text-xl font-bold text-foreground mb-6 text-center">
             What blind and deaf people face every day
           </h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 sm:gap-4">
+          <div className="grid grid-cols-2 xs:grid-cols-3 sm:grid-cols-2 lg:grid-cols-5 gap-3 sm:gap-4">
             {realStruggles.map((s, i) => (
               <GlassCard key={s.title} delay={i * 0.05}>
                 <span className="text-2xl">{s.icon}</span>

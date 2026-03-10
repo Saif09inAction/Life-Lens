@@ -4,30 +4,30 @@ import { motion } from "framer-motion";
 import GlassCard from "../GlassCard";
 
 const blindFeatures = [
-  "Talk to our AI – it tells you color, object, known people, cars, danger, money",
-  "Object detection (obstacles, people, vehicles)",
-  "Voice navigation and safety alerts",
-  "Fall detection: if you don’t respond, we send last location + image to family and trigger SOS",
+  "Talk to our AI – concept: it could tell color, object, known people, cars, danger, money",
+  "Concept: object detection (obstacles, people, vehicles)",
+  "Concept: voice navigation and safety alerts",
+  "Concept: fall detection where, if you don’t respond, it could send last location + image to family and trigger SOS",
 ];
 
 const deafFeatures = [
-  "Real-time speech-to-text captions on the lens",
-  "Display notifications and messages",
-  "Visual alerts for important sounds",
+  "Concept: real-time speech-to-text captions on the lens",
+  "Concept: display notifications and messages",
+  "Concept: visual alerts for important sounds",
 ];
 
 const highlights = [
   {
     title: "Our own AI model",
-    desc: "We're building our own AI—optimized for accessibility and real-world use.",
+    desc: "We are designing our own AI—optimized for accessibility and real-world use in future prototypes.",
   },
   {
     title: "Family can track anytime",
-    desc: "GPS feature lets family see location for peace of mind.",
+    desc: "Concept GPS feature could let family see location for peace of mind.",
   },
   {
     title: "Automatic SOS",
-    desc: "If the user falls and doesn't respond, we automatically send last location, an image, and call SOS.",
+    desc: "In our concept, if the user falls and doesn't respond, the system could send last location, an image, and call SOS.",
   },
 ];
 
@@ -42,10 +42,11 @@ export default function SolutionSection() {
           className="text-center mb-16"
         >
           <h2 className="font-display text-2xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
-            Our Solution – <span className="gradient-text">LifeLens</span>
+            Our Concept – <span className="gradient-text">LifeLens</span>
           </h2>
           <p className="mt-3 sm:mt-4 text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
-            Smart goggles with our own AI model. Family can track anytime via GPS. Blind users talk to AI for color, objects, people, cars, danger, money. If they fall and don’t respond—we send last location, image, and SOS.
+            We are in the ideation stage for smart goggles powered by our own AI model. In this concept, family can track anytime via GPS, blind users talk
+            to AI for color, objects, people, cars, danger, money, and if they fall and don’t respond—the system could send last location, image, and SOS.
           </p>
         </motion.div>
 

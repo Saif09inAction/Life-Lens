@@ -40,13 +40,17 @@ export default function ImpactSection() {
             Impact
           </h2>
           <p className="mt-3 sm:mt-4 text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
-            How LifeLens transforms lives for blind and deaf individuals.
+            The potential impact if LifeLens moves from concept to reality — how it could transform lives for blind and deaf individuals.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+        <div className="flex sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 overflow-x-auto sm:overflow-visible pb-2 sm:pb-0 snap-x snap-mandatory -mx-4 px-4 sm:mx-0 sm:px-0">
           {impacts.map((impact, i) => (
-            <GlassCard key={impact.title} delay={i * 0.1}>
+            <GlassCard
+              key={impact.title}
+              delay={i * 0.1}
+              className="min-w-[230px] max-w-xs sm:max-w-none snap-center"
+            >
               <span className="text-4xl mb-4 block">{impact.icon}</span>
               <h3 className="font-display text-lg font-bold text-foreground">{impact.title}</h3>
               <p className="mt-2 text-sm text-muted-foreground">{impact.description}</p>
