@@ -11,24 +11,24 @@ const teamMembers = [
 
 export default function TeamSection() {
   return (
-    <section id="team" className="relative py-24 lg:py-32">
-      <div className="mx-auto max-w-7xl px-6">
+    <section id="team" className="relative py-16 sm:py-20 lg:py-24 xl:py-32">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="font-display text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
+          <h2 className="font-display text-2xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
             Our Team
           </h2>
-          <p className="mt-4 text-lg text-accent font-semibold">Code Paglu&apos;s</p>
-          <p className="mt-2 text-muted-foreground max-w-xl mx-auto">
+          <p className="mt-3 sm:mt-4 text-base sm:text-lg text-accent font-semibold">Code Paglu&apos;s</p>
+          <p className="mt-2 text-sm sm:text-base text-muted-foreground max-w-xl mx-auto">
             Building accessible technology for blind and deaf communities.
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 max-w-4xl mx-auto">
           {teamMembers.map((member, i) => (
             <GlassCard key={member.name} delay={i * 0.1}>
               <div className="flex flex-col items-center text-center">

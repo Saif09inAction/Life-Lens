@@ -5,23 +5,23 @@ import Image from "next/image";
 
 export default function PrototypeSection() {
   return (
-    <section id="prototype" className="relative py-24 lg:py-32 bg-zinc-50/50 dark:bg-zinc-900/30">
-      <div className="mx-auto max-w-7xl px-6">
+    <section id="prototype" className="relative py-16 sm:py-20 lg:py-24 xl:py-32 bg-zinc-50/50 dark:bg-zinc-900/30">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="font-display text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
+          <h2 className="font-display text-2xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
             Prototype
           </h2>
-          <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="mt-3 sm:mt-4 text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
             Hardware prototypes for blind navigation and deaf communication use cases.
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12">
           {/* Blind user prototype */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -29,7 +29,7 @@ export default function PrototypeSection() {
             viewport={{ once: true }}
             className="rounded-2xl border border-zinc-200 dark:border-zinc-700 bg-white/70 dark:bg-zinc-900/70 backdrop-blur-xl overflow-hidden shadow-xl"
           >
-            <div className="p-6 border-b border-zinc-200 dark:border-zinc-700">
+            <div className="p-4 sm:p-6 border-b border-zinc-200 dark:border-zinc-700">
               <div className="flex items-center gap-3">
                 <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-500/10 text-blue-500">
                   <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -43,8 +43,8 @@ export default function PrototypeSection() {
                 </div>
               </div>
             </div>
-            <div className="p-6 flex flex-col items-center bg-zinc-50 dark:bg-zinc-900/50">
-              <div className="flex items-center justify-center min-h-[340px] w-full">
+            <div className="p-4 sm:p-6 flex flex-col items-center bg-zinc-50 dark:bg-zinc-900/50">
+              <div className="flex items-center justify-center min-h-[220px] sm:min-h-[280px] lg:min-h-[340px] w-full">
                 <Image
                   src="/images/prototype-blind.png"
                   alt="LifeLens Blind Version: Camera, Raspberry Pi Zero W2, Speaker, Microphone, GPS Module, Battery"
@@ -53,7 +53,7 @@ export default function PrototypeSection() {
                   className="w-full h-auto object-contain max-h-[320px]"
                 />
               </div>
-              <div className="mt-4 flex flex-wrap gap-2 justify-center">
+              <div className="mt-3 sm:mt-4 flex flex-wrap gap-2 justify-center">
                 <span className="px-3 py-1.5 rounded-full bg-blue-500/20 text-blue-600 dark:text-blue-400 text-xs font-medium">
                   Camera
                 </span>
@@ -77,7 +77,7 @@ export default function PrototypeSection() {
             viewport={{ once: true }}
             className="rounded-2xl border border-zinc-200 dark:border-zinc-700 bg-white/70 dark:bg-zinc-900/70 backdrop-blur-xl overflow-hidden shadow-xl"
           >
-            <div className="p-6 border-b border-zinc-200 dark:border-zinc-700">
+            <div className="p-4 sm:p-6 border-b border-zinc-200 dark:border-zinc-700">
               <div className="flex items-center gap-3">
                 <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-violet-500/10 text-violet-500">
                   <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -90,8 +90,8 @@ export default function PrototypeSection() {
                 </div>
               </div>
             </div>
-            <div className="p-6 flex flex-col items-center bg-zinc-50 dark:bg-zinc-900/50">
-              <div className="flex items-center justify-center min-h-[340px] w-full">
+            <div className="p-4 sm:p-6 flex flex-col items-center bg-zinc-50 dark:bg-zinc-900/50">
+              <div className="flex items-center justify-center min-h-[220px] sm:min-h-[280px] lg:min-h-[340px] w-full">
                 <Image
                   src="/images/prototype-deaf.png"
                   alt="LifeLens Deaf Version: Transparent Display, Mic-1, Mic-2, Raspberry Pi Zero W2, GPS Module, Battery"
@@ -100,7 +100,7 @@ export default function PrototypeSection() {
                   className="w-full h-auto object-contain max-h-[320px]"
                 />
               </div>
-              <div className="mt-4 flex flex-wrap gap-2 justify-center">
+              <div className="mt-3 sm:mt-4 flex flex-wrap gap-2 justify-center">
                 <span className="px-3 py-1.5 rounded-full bg-violet-500/20 text-violet-600 dark:text-violet-400 text-xs font-medium">
                   Transparent Display
                 </span>

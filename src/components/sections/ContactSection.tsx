@@ -29,18 +29,18 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="relative py-24 lg:py-32 bg-zinc-50/50 dark:bg-zinc-900/30">
-      <div className="mx-auto max-w-7xl px-6">
+    <section id="contact" className="relative py-16 sm:py-20 lg:py-24 xl:py-32 bg-zinc-50/50 dark:bg-zinc-900/30">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="font-display text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
+          <h2 className="font-display text-2xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
             Contact & Demo Request
           </h2>
-          <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="mt-3 sm:mt-4 text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
             Request a demo, collaborate with us, or share feedback.
           </p>
         </motion.div>
@@ -49,7 +49,7 @@ export default function ContactSection() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mx-auto max-w-xl rounded-2xl border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-900/70 backdrop-blur-xl p-8 shadow-xl"
+          className="mx-auto max-w-xl rounded-2xl border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-900/70 backdrop-blur-xl p-5 sm:p-8 shadow-xl"
         >
           {submitted ? (
             <div className="text-center py-12">
@@ -131,7 +131,7 @@ export default function ContactSection() {
               </div>
               <button
                 type="submit"
-                className="w-full rounded-xl bg-accent px-6 py-4 font-semibold text-white shadow-lg shadow-accent/25 transition-all hover:bg-accent/90 hover:shadow-accent/40"
+                className="w-full rounded-xl bg-accent px-6 py-4 font-semibold text-white shadow-lg shadow-accent/25 transition-all hover:bg-accent/90 hover:shadow-accent/40 min-h-[48px]"
               >
                 Send Message
               </button>

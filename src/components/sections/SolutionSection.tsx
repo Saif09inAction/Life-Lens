@@ -33,24 +33,24 @@ const highlights = [
 
 export default function SolutionSection() {
   return (
-    <section id="solution" className="relative py-24 lg:py-32 bg-zinc-50/50 dark:bg-zinc-900/30">
-      <div className="mx-auto max-w-7xl px-6">
+    <section id="solution" className="relative py-16 sm:py-20 lg:py-24 xl:py-32 bg-zinc-50/50 dark:bg-zinc-900/30">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="font-display text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
+          <h2 className="font-display text-2xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
             Our Solution – <span className="gradient-text">LifeLens</span>
           </h2>
-          <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="mt-3 sm:mt-4 text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
             Smart goggles with our own AI model. Family can track anytime via GPS. Blind users talk to AI for color, objects, people, cars, danger, money. If they fall and don’t respond—we send last location, image, and SOS.
           </p>
         </motion.div>
 
         {/* Key highlights */}
-        <div className="grid md:grid-cols-3 gap-6 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 mb-12 sm:mb-16">
           {highlights.map((h, i) => (
             <GlassCard key={h.title} delay={i * 0.1}>
               <div className="flex items-start gap-3">
@@ -66,7 +66,7 @@ export default function SolutionSection() {
           ))}
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
           <GlassCard delay={0}>
             <div className="flex items-center gap-3 mb-4">
               <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-500/10 text-blue-500">

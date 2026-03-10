@@ -23,7 +23,7 @@ export default function GlassCard({
       viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: 0.5, delay }}
       whileHover={hover ? { y: -4, transition: { duration: 0.2 } } : undefined}
-      className={`rounded-2xl border border-zinc-200/50 dark:border-zinc-700/50 bg-white/70 dark:bg-zinc-900/70 backdrop-blur-xl p-6 shadow-lg ${className}`}
+      className={`rounded-2xl border border-zinc-200/50 dark:border-zinc-700/50 bg-white/70 dark:bg-zinc-900/70 backdrop-blur-xl p-4 sm:p-6 shadow-lg ${className}`}
     >
       {children}
     </motion.div>

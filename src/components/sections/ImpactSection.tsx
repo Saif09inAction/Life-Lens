@@ -28,23 +28,23 @@ const impacts = [
 
 export default function ImpactSection() {
   return (
-    <section id="impact" className="relative py-24 lg:py-32">
-      <div className="mx-auto max-w-7xl px-6">
+    <section id="impact" className="relative py-16 sm:py-20 lg:py-24 xl:py-32">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="font-display text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
+          <h2 className="font-display text-2xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
             Impact
           </h2>
-          <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="mt-3 sm:mt-4 text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
             How LifeLens transforms lives for blind and deaf individuals.
           </p>
         </motion.div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {impacts.map((impact, i) => (
             <GlassCard key={impact.title} delay={i * 0.1}>
               <span className="text-4xl mb-4 block">{impact.icon}</span>

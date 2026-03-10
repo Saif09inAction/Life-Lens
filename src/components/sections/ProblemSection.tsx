@@ -45,24 +45,24 @@ const impactImages = [
 
 export default function ProblemSection() {
   return (
-    <section id="problem" className="relative py-24 lg:py-32 bg-zinc-50/50 dark:bg-zinc-900/30">
-      <div className="mx-auto max-w-7xl px-6">
+    <section id="problem" className="relative py-16 sm:py-20 lg:py-24 xl:py-32 bg-zinc-50/50 dark:bg-zinc-900/30">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="font-display text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
+          <h2 className="font-display text-2xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
             Real-Life Struggles
           </h2>
-          <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="mt-3 sm:mt-4 text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto px-1">
             Blind and deaf people face daily risks: no stick, unemployment, robbery, falling into manholes—and families live in constant worry. We are here to help.
           </p>
         </motion.div>
 
         {/* Struggle stats */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-10 sm:mb-12">
           {struggleStats.map((stat, i) => (
             <GlassCard key={stat.label} delay={i * 0.1}>
               <div className="text-2xl lg:text-3xl font-display font-bold text-red-500 dark:text-red-400">
@@ -84,7 +84,7 @@ export default function ProblemSection() {
           <h3 className="font-display text-xl font-bold text-foreground mb-6 text-center">
             What blind and deaf people face every day
           </h3>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 sm:gap-4">
             {realStruggles.map((s, i) => (
               <GlassCard key={s.title} delay={i * 0.05}>
                 <span className="text-2xl">{s.icon}</span>
@@ -105,7 +105,7 @@ export default function ProblemSection() {
           <h3 className="font-display text-xl font-bold text-foreground mb-6 text-center">
             The reality
           </h3>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {impactImages.map((img, i) => (
               <motion.div
                 key={img.caption}
@@ -138,9 +138,9 @@ export default function ProblemSection() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="rounded-2xl border-2 border-accent/30 bg-accent/5 dark:bg-accent/10 p-8 lg:p-12 text-center"
+          className="rounded-2xl border-2 border-accent/30 bg-accent/5 dark:bg-accent/10 p-6 sm:p-8 lg:p-12 text-center"
         >
-          <h3 className="font-display text-2xl font-bold text-foreground">
+          <h3 className="font-display text-xl sm:text-2xl font-bold text-foreground">
             We are here to help
           </h3>
           <p className="mt-3 text-muted-foreground max-w-2xl mx-auto">
@@ -148,7 +148,7 @@ export default function ProblemSection() {
           </p>
           <a
             href="#solution"
-            className="inline-flex mt-6 items-center gap-2 rounded-xl bg-accent px-6 py-3 font-semibold text-white hover:bg-accent/90 transition-colors"
+            className="inline-flex mt-5 sm:mt-6 items-center justify-center gap-2 rounded-xl bg-accent px-6 py-3.5 font-semibold text-white hover:bg-accent/90 transition-colors min-h-[48px]"
           >
             See our solution
             <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">

@@ -5,16 +5,16 @@ import { motion } from "framer-motion";
 
 export default function Footer() {
   return (
-    <footer className="relative border-t border-zinc-200 dark:border-zinc-800 py-16">
-      <div className="mx-auto max-w-7xl px-6">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+    <footer className="relative border-t border-zinc-200 dark:border-zinc-800 py-12 sm:py-16">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-6 sm:gap-8">
           <div className="flex items-center gap-2">
             <span className="font-display text-xl font-bold text-foreground">LifeLens</span>
             <span className="rounded-full bg-accent px-2 py-0.5 text-xs font-medium text-white">
               AI
             </span>
           </div>
-          <div className="flex flex-wrap items-center justify-center gap-6">
+          <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
             <Link href="#problem" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
               Problem
             </Link>

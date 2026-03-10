@@ -30,8 +30,8 @@ const software = [
 
 export default function ArchitectureSection() {
   return (
-    <section id="architecture" className="relative py-24 lg:py-32">
-      <div className="mx-auto max-w-7xl px-6">
+    <section id="architecture" className="relative py-16 sm:py-20 lg:py-24 xl:py-32">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -51,9 +51,9 @@ export default function ArchitectureSection() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="rounded-2xl border border-zinc-200 dark:border-zinc-700 bg-zinc-50/50 dark:bg-zinc-900/50 p-6 lg:p-10 mb-16 overflow-x-auto"
+          className="rounded-2xl border border-zinc-200 dark:border-zinc-700 bg-zinc-50/50 dark:bg-zinc-900/50 p-4 sm:p-6 lg:p-10 mb-12 sm:mb-16 overflow-x-auto -mx-1 sm:mx-0"
         >
-          <div className="flex flex-col lg:flex-row items-stretch justify-center gap-4 lg:gap-2 min-w-[600px]">
+          <div className="flex flex-col lg:flex-row items-stretch justify-center gap-3 sm:gap-4 lg:gap-2 lg:min-w-[600px]">
             {nodes.map((node, i) => (
               <div key={node.id} className="flex items-center gap-2 lg:flex-1">
                 <motion.div
@@ -78,9 +78,14 @@ export default function ArchitectureSection() {
                   )}
                 </motion.div>
                 {i < nodes.length - 1 && (
-                  <svg className="hidden lg:block h-6 w-6 text-accent shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
+                  <>
+                    <svg className="hidden lg:block h-6 w-6 text-accent shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                    <svg className="lg:hidden h-5 w-5 text-accent shrink-0 self-center" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                    </svg>
+                  </>
                 )}
               </div>
             ))}
@@ -98,9 +103,9 @@ export default function ArchitectureSection() {
             <h3 className="font-display text-lg font-bold text-foreground mb-4">Hardware</h3>
             <ul className="space-y-2">
               {hardware.map((h, i) => (
-                <li key={h.name} className="flex justify-between items-center text-sm">
+                <li key={h.name} className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-0.5 text-sm">
                   <span className="font-medium text-foreground">{h.name}</span>
-                  <span className="text-muted-foreground">{h.role}</span>
+                  <span className="text-muted-foreground text-xs sm:text-sm">{h.role}</span>
                 </li>
               ))}
             </ul>
