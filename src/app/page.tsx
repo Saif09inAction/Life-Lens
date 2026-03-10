@@ -8,7 +8,6 @@ import SolutionSection from "@/components/sections/SolutionSection";
 import HowItWorksSection from "@/components/sections/HowItWorksSection";
 import ImpactSection from "@/components/sections/ImpactSection";
 import TeamSection from "@/components/sections/TeamSection";
-import ContactSection from "@/components/sections/ContactSection";
 
 export default function Home() {
   return (
@@ -23,7 +22,6 @@ export default function Home() {
         <HowItWorksSection />
         <ImpactSection />
         <TeamSection />
-        <ContactSection />
       </main>
       <Footer />
     </div>
