@@ -22,22 +22,22 @@ const realStruggles = [
 
 const impactImages = [
   {
-    src: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=800",
+    src: "/images/problem-street.png",
     alt: "Busy street - blind and deaf pedestrians face high risk of accidents",
     caption: "Street hazards",
   },
   {
-    src: "https://images.unsplash.com/photo-1614850523459-c2f4c699c52e?w=800",
+    src: "/images/problem-mobility.png",
     alt: "Blind person with cane - many lack even this basic aid",
     caption: "Lack of mobility aids",
   },
   {
-    src: "https://images.unsplash.com/photo-1584515933487-779824d29309?w=800",
+    src: "/images/problem-communication.png",
     alt: "Deaf individuals face communication barriers daily",
     caption: "Communication isolation",
   },
   {
-    src: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800",
+    src: "/images/problem-urban.png",
     alt: "Urban hazards - manholes and obstacles endanger blind pedestrians",
     caption: "Urban danger",
   },
