@@ -47,7 +47,7 @@ export default function PrototypeSection() {
               <div className="flex items-center justify-center min-h-[220px] sm:min-h-[280px] lg:min-h-[340px] w-full">
                 <Image
                   src="/images/prototype-blind.png"
-                  alt="LifeLens Blind Version: Camera, Raspberry Pi Zero W2, Speaker, Microphone, GPS Module, Battery"
+                  alt="LifeLens Blind Version: Camera, Ultrasonic Sensor, Raspberry Pi Zero W2, Speaker, Microphone, GPS Module, MPU6050, Battery"
                   width={400}
                   height={300}
                   className="w-full h-auto object-contain max-h-[320px]"
@@ -60,8 +60,14 @@ export default function PrototypeSection() {
                 <span className="px-3 py-1.5 rounded-full bg-violet-500/20 text-violet-600 dark:text-violet-400 text-xs font-medium">
                   Raspberry Pi Zero W2
                 </span>
+                <span className="px-3 py-1.5 rounded-full bg-amber-500/20 text-amber-600 dark:text-amber-400 text-xs font-medium">
+                  Ultrasonic
+                </span>
                 <span className="px-3 py-1.5 rounded-full bg-cyan-500/20 text-cyan-600 dark:text-cyan-400 text-xs font-medium">
                   Speaker
+                </span>
+                <span className="px-3 py-1.5 rounded-full bg-rose-500/20 text-rose-600 dark:text-rose-400 text-xs font-medium">
+                  MPU6050
                 </span>
                 <span className="px-3 py-1.5 rounded-full bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 text-xs font-medium">
                   GPS
@@ -94,7 +100,7 @@ export default function PrototypeSection() {
               <div className="flex items-center justify-center min-h-[220px] sm:min-h-[280px] lg:min-h-[340px] w-full">
                 <Image
                   src="/images/prototype-deaf.png"
-                  alt="LifeLens Deaf Version: Transparent Display, Mic-1, Mic-2, Raspberry Pi Zero W2, GPS Module, Battery"
+                  alt="LifeLens Deaf Version: Camera, Sound Sensor (mic), Raspberry Pi Zero W2, Transparent Display, GPS Module, MPU6050, Battery"
                   width={400}
                   height={300}
                   className="w-full h-auto object-contain max-h-[320px]"
@@ -105,10 +111,13 @@ export default function PrototypeSection() {
                   Transparent Display
                 </span>
                 <span className="px-3 py-1.5 rounded-full bg-blue-500/20 text-blue-600 dark:text-blue-400 text-xs font-medium">
-                  Mic-1 & Mic-2
+                  Sound Sensor (mic)
                 </span>
                 <span className="px-3 py-1.5 rounded-full bg-violet-500/20 text-violet-600 dark:text-violet-400 text-xs font-medium">
                   Raspberry Pi Zero W2
+                </span>
+                <span className="px-3 py-1.5 rounded-full bg-rose-500/20 text-rose-600 dark:text-rose-400 text-xs font-medium">
+                  MPU6050
                 </span>
                 <span className="px-3 py-1.5 rounded-full bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 text-xs font-medium">
                   GPS Module

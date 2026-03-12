@@ -25,12 +25,12 @@ export const viewport = {
 export const metadata: Metadata = {
   title: "LifeLens – AI Smart Assistive Goggles for Blind and Deaf People | Code Paglu's",
   description:
-    "AI-powered smart goggles that help blind users navigate safely and deaf users understand conversations in real time. Built by Code Paglu's.",
+    "AI-powered smart goggles with computer vision, ultrasonic distance sensing, MPU6050 motion detection, speech recognition, and real-time Raspberry Pi processing. Help blind users navigate safely and deaf users understand conversations. Built by Code Paglu's.",
   keywords: ["LifeLens", "AI", "smart goggles", "accessibility", "blind", "deaf", "assistive technology"],
   openGraph: {
     title: "LifeLens – AI Smart Goggles for Accessibility",
     description:
-      "AI-powered smart goggles for blind and deaf individuals. Real-time navigation, captions, and safety.",
+      "AI-powered smart goggles with computer vision, ultrasonic and motion sensors, speech-to-text, and real-time processing. Navigation, captions, and safety for blind and deaf users.",
   },
 };
 
@@ -40,7 +40,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" className="dark" suppressHydrationWarning>
       <body className={`${inter.variable} ${spaceGrotesk.variable} font-sans antialiased`}>
         <ThemeProvider>
           <SmoothScrollProvider>{children}</SmoothScrollProvider>

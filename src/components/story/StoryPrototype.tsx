@@ -34,13 +34,13 @@ export default function StoryPrototype() {
               id: "blind",
               title: "Blind version",
               src: "/images/prototype-blind-version.png",
-              description: "Camera, speaker, microphone, GPS and battery arranged to prioritise obstacle detection and audio guidance.",
+              description: "Camera, Ultrasonic Sensor (HC-SR04), Raspberry Pi Zero W2, speaker, microphone, GPS module, MPU6050 motion sensor and battery for obstacle detection, navigation and fall-detection alerts.",
             },
             {
               id: "deaf",
               title: "Deaf version",
               src: "/images/prototype-deaf-version.png",
-              description: "Dual microphones, transparent display and GPS to focus on live captions and safety alerts.",
+              description: "Camera, sound sensor (mic), Raspberry Pi Zero W2, transparent display, GPS module, MPU6050 and battery for live captions and safety alerts.",
             },
           ].map((item, index) => (
             <motion.div
@@ -54,7 +54,7 @@ export default function StoryPrototype() {
               <div className="relative aspect-[4/3] bg-zinc-950">
                 <Image
                   src={item.src}
-                  alt={item.title}
+                  alt={item.id === "blind" ? "LifeLens Blind Version prototype: Camera, Ultrasonic Sensor, Raspberry Pi Zero W2, Speaker, Microphone, GPS Module, MPU6050, Battery" : "LifeLens Deaf Version prototype: Camera, Sound Sensor (mic), Raspberry Pi Zero W2, Transparent Display, GPS Module, MPU6050, Battery"}
                   fill
                   className="object-contain p-6 sm:p-8"
                   sizes="(max-width: 768px) 100vw, 50vw"

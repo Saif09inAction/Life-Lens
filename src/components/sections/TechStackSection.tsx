@@ -10,6 +10,8 @@ const hardware = [
   "Microphone",
   "Speaker",
   "GPS module",
+  "Ultrasonic Sensor (HC-SR04)",
+  "MPU6050 Motion Sensor (Accelerometer + Gyroscope)",
 ];
 
 const software = [

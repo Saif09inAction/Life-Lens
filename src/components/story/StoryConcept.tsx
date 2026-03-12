@@ -23,8 +23,9 @@ export default function StoryConcept() {
             A quiet companion that sees and listens for you.
           </h2>
           <p className="mt-3 max-w-2xl mx-auto text-sm sm:text-base text-zinc-300">
-            LifeLens is currently a concept — a pair of AI-powered smart goggles that could detect obstacles, read text, caption speech,
-            and keep loved ones informed when something goes wrong.
+            LifeLens is currently a concept — a pair of AI-powered smart goggles that integrate computer vision, distance sensing (ultrasonic),
+            motion detection (MPU6050), speech recognition and text display, with real-time processing on a Raspberry Pi. The device could detect
+            obstacles, read text, caption speech, and keep loved ones informed when something goes wrong.
           </p>
         </motion.div>
 

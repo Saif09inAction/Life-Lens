@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 
 const nodes = [
-  { id: "input", label: "Input", items: ["Camera", "Microphone"], icon: "📥" },
+  { id: "input", label: "Input", items: ["Camera", "Microphone", "Ultrasonic (HC-SR04)", "MPU6050"], icon: "📥" },
   { id: "edge", label: "Raspberry Pi Zero 2 W", sub: "Edge Processing Unit", icon: "🖥️" },
   { id: "ai", label: "AI Processing", items: ["Object Detection", "OCR Text Recognition", "Speech Recognition"], icon: "🤖" },
   { id: "decision", label: "Decision & Output Engine", sub: "Synthesizes data, routes output", icon: "⚙️" },
@@ -17,6 +17,8 @@ const hardware = [
   { name: "GPS Module", role: "Location & SOS" },
   { name: "Transparent OLED", role: "Captions for deaf users" },
   { name: "Speaker", role: "Audio for blind users" },
+  { name: "Ultrasonic Sensor (HC-SR04)", role: "Distance to obstacles for navigation" },
+  { name: "MPU6050 (Accelerometer + Gyroscope)", role: "Fall detection, emergency alerts" },
   { name: "Battery", role: "Power" },
 ];
 
@@ -42,7 +44,7 @@ export default function ArchitectureSection() {
             System Architecture
           </h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-            Camera and microphone feed the Raspberry Pi Zero 2 W, which runs a single AI processing layer (object detection, OCR, speech recognition). The Decision Engine routes output to captions for deaf users, audio for blind users, and a companion app for GPS/SOS.
+            The camera captures the surrounding environment in real time; the AI model processes the video feed to detect objects, obstacles, and faces. The ultrasonic sensor measures distance to nearby obstacles for navigation accuracy. The Raspberry Pi processes all sensor data and determines the appropriate response. For blind users, audio guidance is delivered through the speaker; for deaf users, the microphone captures speech and converts it to text on the transparent display. The MPU6050 motion sensor monitors body movement and detects falls, enabling emergency alerts. The GPS module tracks location and sends SOS alerts with live location to family when needed.
           </p>
         </motion.div>
 

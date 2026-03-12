@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
@@ -37,6 +38,8 @@ const realityImages = [
 ];
 
 export default function StoryRealityStrip() {
+  const [isPaused, setIsPaused] = useState(false);
+
   return (
     <section id="reality" className="relative py-20 sm:py-24 lg:py-28 bg-gradient-to-b from-black via-zinc-950 to-zinc-950">
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(59,130,246,0.25),transparent_55%)]" />
@@ -58,32 +61,43 @@ export default function StoryRealityStrip() {
           </h2>
         </motion.div>
 
-        <div className="flex gap-5 sm:gap-6 overflow-x-auto pb-4 snap-x snap-mandatory -mx-4 px-4 sm:mx-0 sm:px-0">
-          {realityImages.map((img, i) => (
-            <motion.div
-              key={img.caption}
-              initial={{ opacity: 0, y: 40, scale: 0.96 }}
-              whileInView={{ opacity: 1, y: 0, scale: 1 }}
-              viewport={{ once: true, amount: 0.4 }}
-              transition={{ duration: 0.6, delay: i * 0.06 }}
-              whileHover={{ y: -6, scale: 1.03, rotateY: 3 }}
-              className="relative min-w-[260px] max-w-xs sm:max-w-sm snap-center rounded-3xl border border-white/10 bg-white/[0.02] shadow-[0_24px_80px_rgba(0,0,0,0.85)] overflow-hidden"
-            >
-              <div className="relative aspect-[4/3]">
-                <Image
-                  src={img.src}
-                  alt={img.alt}
-                  fill
-                  className="object-cover scale-105 hover:scale-110 transition-transform duration-700 ease-out"
-                  sizes="(max-width: 768px) 80vw, 33vw"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-              </div>
-              <div className="absolute inset-x-0 bottom-0 p-4 text-xs sm:text-sm text-zinc-100">
-                {img.caption}
-              </div>
-            </motion.div>
-          ))}
+        <div
+          className="overflow-hidden -mx-4 sm:mx-0"
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => setIsPaused(false)}
+          onTouchStart={() => setIsPaused(true)}
+          onTouchEnd={() => setIsPaused(false)}
+          onTouchCancel={() => setIsPaused(false)}
+        >
+          <div
+            className="flex gap-5 sm:gap-6 w-max animate-reality-slideshow"
+            style={{ animationPlayState: isPaused ? "paused" : "running" }}
+          >
+            {[...realityImages, ...realityImages].map((img, i) => (
+              <motion.div
+                key={`${img.caption}-${i}`}
+                initial={{ opacity: 0, y: 40, scale: 0.96 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ duration: 0.6, delay: (i % realityImages.length) * 0.06 }}
+                className="relative min-w-[260px] max-w-[260px] sm:min-w-[320px] sm:max-w-[320px] flex-shrink-0 rounded-3xl border border-white/10 bg-white/[0.02] shadow-[0_24px_80px_rgba(0,0,0,0.85)] overflow-hidden"
+              >
+                <div className="relative aspect-[4/3]">
+                  <Image
+                    src={img.src}
+                    alt={img.alt}
+                    fill
+                    className="object-cover scale-105 transition-transform duration-700 ease-out"
+                    sizes="(max-width: 768px) 260px, 320px"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                </div>
+                <div className="absolute inset-x-0 bottom-0 p-4 text-xs sm:text-sm text-zinc-100">
+                  {img.caption}
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
